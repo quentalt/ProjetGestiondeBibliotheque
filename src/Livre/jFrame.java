@@ -444,11 +444,9 @@ setSize(WIDTH, HEIGHT);
   
       this.mySQLConnect = new Bibliotheque();
 
-      String sql = "UPDATE ouvrage SET Titre='"+txttitle.getText()+"',DateDAchat='"+txtdatetachat.getText()+"',Auteur='"+txtauthor.getText()+"',Prix='"+txtprice.getText()+"',MotsClefs='"+txtmotsclefs.getText()+"',Resume='"+txtresume.getText()+"', DureeDeVie='"+txtdureevie.getText()+"', CodeBarre='"+"";
+      String sql = "UPDATE ouvrages SET Titre='Burguess WHERE id in (1,3)"
+	      
 
-
-//String sql = "UPDATE ouvrage SET CodeBarre ='"+txtcodeBar.getText()+"', Auteur = '"+txtauthor.getText()+"',Titre = '"+txttitle.getText()"', Resume = '"+txtauthor.getText()+"',MotsClefs= '"+txtmotsclefs.getText()+"',DateDAchat = '"+txtdatetachat.getText()+"',DureeDeVie = '"+txtdureevie.getText()+"' WHERE ouvrage='";
-    
  try{
             PreparedStatement stmt = mySQLConnect.connect().prepareStatement(sql);
             int rs = stmt.executeUpdate(sql);
